@@ -1,0 +1,14 @@
+import numpy as np
+
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+sum_arr = arr1 + arr2
+diff_arr = arr1 - arr2
+prod_arr = arr1 * arr2
+div_arr = arr1 / arr2
+
+print("Element-wise addition:", sum_arr)
+print("Element-wise subtraction:", diff_arr)
+print("Element-wise multiplication:", prod_arr)
+print("Element-wise division:", div_arr)
