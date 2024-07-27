@@ -1,0 +1,7 @@
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+max_val = arr.max()
+min_val = arr.min()
+print("Maximum value:", max_val)
+print("Minimum value:", min_val
