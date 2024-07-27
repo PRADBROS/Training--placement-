@@ -1,0 +1,4 @@
+import numpy as np
+
+arr = np.arange(0, 20, 2)
+print("Array with range and step:", arr)
