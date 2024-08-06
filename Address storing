@@ -1,0 +1,32 @@
+class AddressBook:
+    def __init__(self):
+        self.addresses = {}
+
+    def add_address(self, name, address):
+        self.addresses[name] = address
+
+    def view_addresses(self):
+        for name in sorted(self.addresses):
+            print(f"{name}: {self.addresses[name]}")
+
+    def delete_address(self, name):
+        self.addresses.pop(name, None)
+
+def main():
+    book = AddressBook()
+    actions = {
+        "1": ("Add Address", lambda: book.add_address(input("Name: "), input("Address: "))),
+        "2": ("View Addresses", book.view_addresses),
+        "3": ("Delete Address", lambda: book.delete_address(input("Name: "))),
+        "4": ("Exit", exit)
+    }
+
+    while True:
+        for key, (desc, _) in actions.items():
+            print(f"{key}. {desc}")
+        choice = input("Choose an option: ")
+        if choice in actions:
+            actions[choice][1]()
+
+if __name__ == "__main__":
+    main()
